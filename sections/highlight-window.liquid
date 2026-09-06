@@ -1,0 +1,565 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+  #HighlightWindow-{{ section.id }} .highlight-window__overlay {
+    opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};
+  }
+{%- endstyle -%}
+
+{%- liquid
+  assign hw_product = section.settings.product
+  assign hw_variant = hw_product.selected_or_first_available_variant
+
+  assign use_add_to_cart = false
+  if section.settings.button_behavior == 'add_to_cart' and hw_product != blank
+    assign use_add_to_cart = true
+  endif
+
+  assign show_button = false
+  if section.settings.button_label != blank
+    if use_add_to_cart
+      assign show_button = true
+    elsif section.settings.button_behavior == 'link'
+      if section.settings.button_link != blank
+        assign show_button = true
+      endif
+    endif
+  endif
+
+  assign hw_form_id = 'HighlightWindowForm-' | append: section.id
+
+  assign hw_display_image = section.settings.image
+  if hw_display_image == blank and hw_product != blank
+    assign hw_display_image = hw_product.featured_image
+  endif
+
+  assign hw_heading = section.settings.heading
+  if hw_heading == blank and hw_product != blank
+    assign hw_heading = hw_product.title | escape
+  endif
+
+  assign fetch_priority = 'auto'
+  if section.index == 1
+    assign fetch_priority = 'high'
+  endif
+
+  assign hw_description = section.settings.description
+  if hw_description == blank and hw_product != blank
+    assign hw_description = hw_product.description
+  endif
+-%}
+
+<div
+  id="HighlightWindow-{{ section.id }}"
+  class="highlight-window section-{{ section.id }}-padding highlight-window--{{ section.settings.section_height }} isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}"
+  style="
+    --hw-card-background: {{ section.settings.card_background }};
+    --hw-heading-color: {{ section.settings.heading_color }};
+    --hw-text-color: {{ section.settings.text_color }};
+    --hw-link-color: {{ section.settings.link_color }};
+    --hw-card-position-x: {{ section.settings.card_position_horizontal }};
+    --hw-card-position-y: {{ section.settings.card_position_vertical }};
+    --hw-card-max-width: {{ section.settings.card_max_width }}px;
+    --hw-image-width: {{ section.settings.image_width }}px;
+  "
+>
+  <div class="highlight-window__media media{% if section.settings.background_image == blank %} placeholder{% endif %}">
+    {%- if section.settings.background_image != blank -%}
+      {{
+        section.settings.background_image
+        | image_url: width: 3000
+        | image_tag: widths: '540, 720, 900, 1080, 1440, 1800, 2160, 2880', sizes: '100vw', alt: section.settings.background_image.alt, fetchpriority: fetch_priority
+      }}
+    {%- else -%}
+      {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+    {%- endif -%}
+  </div>
+
+  <div class="highlight-window__overlay" aria-hidden="true"></div>
+
+  <div class="highlight-window__container page-width-large">
+    <div class="highlight-window__card content-container highlight-window__card--{{ section.settings.content_alignment }}">
+      {%- if hw_display_image != blank -%}
+        <div class="highlight-window__image">
+          {{
+            hw_display_image
+            | image_url: width: 1200
+            | image_tag: widths: '180, 360, 540, 720, 1080', sizes: '(min-width: 750px) 350px, 60vw'
+          }}
+        </div>
+      {%- endif -%}
+
+      <div class="highlight-window__content">
+        {%- if hw_heading != blank -%}
+          <h2 class="highlight-window__heading inline-richtext {{ section.settings.heading_size }}">
+            {{ hw_heading }}
+          </h2>
+        {%- endif -%}
+
+        {%- if hw_description != blank -%}
+          <div class="highlight-window__text rte">{{ hw_description }}</div>
+        {%- endif -%}
+
+        {%- if show_button -%}
+          {%- if use_add_to_cart -%}
+            <product-form class="highlight-window__cart">
+              <div class="product-form__error-message-wrapper" role="alert" hidden>
+                <span class="svg-wrapper">
+                  {{- 'icon-error.svg' | inline_asset_content -}}
+                </span>
+                <span class="product-form__error-message"></span>
+              </div>
+              {%- form 'product',
+                hw_product,
+                id: hw_form_id,
+                class: 'form',
+                novalidate: 'novalidate',
+                data-type: 'add-to-cart-form'
+              -%}
+                <input
+                  type="hidden"
+                  name="id"
+                  value="{{ hw_variant.id }}"
+                  class="product-variant-id"
+                  {% unless hw_variant.available %}
+                    disabled
+                  {% endunless %}
+                >
+                <button
+                  type="submit"
+                  name="add"
+                  class="highlight-window__button"
+                  {% unless hw_variant.available %}
+                    disabled
+                  {% endunless %}
+                >
+                  <span>
+                    {%- if hw_variant == null -%}
+                      {{- 'products.product.unavailable' | t -}}
+                    {%- elsif hw_variant.available == false -%}
+                      {{- 'products.product.sold_out' | t -}}
+                    {%- else -%}
+                      {{- section.settings.button_label | escape -}}
+                    {%- endif -%}
+                  </span>
+                  {%- render 'loading-spinner' -%}
+                </button>
+              {%- endform -%}
+            </product-form>
+          {%- else -%}
+            <a class="highlight-window__button" href="{{ section.settings.button_link }}">
+              <span>{{ section.settings.button_label | escape }}</span>
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+{%- if use_add_to_cart -%}
+  <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{%- endif -%}
+
+{% stylesheet %}
+  .highlight-window {
+    position: relative;
+  }
+
+  .highlight-window .highlight-window__media {
+    position: absolute;
+    inset: 0;
+  }
+
+  .highlight-window__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .highlight-window__overlay {
+    display: block !important;
+    position: absolute;
+    inset: 0;
+    background-color: #000;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .highlight-window .highlight-window__container.page-width-large {
+    position: relative;
+    display: flex;
+    justify-content: var(--hw-card-position-x);
+    align-items: var(--hw-card-position-y);
+    padding-block: 3rem;
+  }
+
+  .highlight-window--small .highlight-window__container {
+    min-height: 60rem;
+  }
+
+  .highlight-window--medium .highlight-window__container {
+    min-height: 80rem;
+  }
+
+  .highlight-window--large .highlight-window__container {
+    min-height: 100rem;
+  }
+
+  .highlight-window--adapt .highlight-window__container {
+    min-height: 0;
+  }
+
+  .highlight-window__card {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 100%;
+    max-width: var(--hw-card-max-width);
+    padding: 4rem 2.4rem;
+    background-color: var(--hw-card-background);
+  }
+
+  .highlight-window__card--left {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .highlight-window__card--center {
+    align-items: center;
+    text-align: center;
+  }
+
+  .highlight-window__card--right {
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .highlight-window__image {
+    width: var(--hw-image-width);
+    max-width: 100%;
+  }
+
+  .highlight-window__image img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .highlight-window__content {
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    gap: 2.4rem;
+    width: 100%;
+  }
+
+  .highlight-window .highlight-window__heading {
+    margin: 0;
+    color: var(--hw-heading-color);
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .highlight-window .highlight-window__text {
+    color: var(--hw-text-color);
+    font-size: 2rem;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+
+  .highlight-window__text > * {
+    margin: 0;
+  }
+
+  .highlight-window__text > * + * {
+    margin-top: 1.6rem;
+  }
+
+  .highlight-window__cart {
+    display: block;
+  }
+
+  .highlight-window__button .loading__spinner {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .highlight-window__button .loading__spinner .path {
+    stroke: currentColor;
+  }
+
+  .highlight-window__button.loading > span {
+    visibility: hidden;
+  }
+
+  .highlight-window__button,
+  a.highlight-window__button,
+  a.highlight-window__button:hover,
+  a.highlight-window__button:visited {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--hw-link-color);
+    font-family: inherit;
+    font-size: 2rem;
+    letter-spacing: 0;
+    line-height: normal;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  @media screen and (min-width: 750px) {
+    .highlight-window .highlight-window__container.page-width-large {
+      padding-block: 6.2rem;
+    }
+
+    .highlight-window__card {
+      gap: 6rem;
+      padding: 20rem 7rem;
+    }
+
+    .highlight-window__content {
+      gap: 4rem;
+    }
+
+    .highlight-window__heading.h1 {
+      font-size: 4.4rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:sections.highlight-window.name",
+  "tag": "section",
+  "class": "section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.highlight-window.settings.header__section.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "t:sections.highlight-window.settings.background_image.label"
+    },
+    {
+      "type": "select",
+      "id": "section_height",
+      "label": "t:sections.highlight-window.settings.section_height.label",
+      "options": [
+        { "value": "adapt", "label": "t:sections.highlight-window.settings.section_height.options__1.label" },
+        { "value": "small", "label": "t:sections.highlight-window.settings.section_height.options__2.label" },
+        { "value": "medium", "label": "t:sections.highlight-window.settings.section_height.options__3.label" },
+        { "value": "large", "label": "t:sections.highlight-window.settings.section_height.options__4.label" }
+      ],
+      "default": "adapt"
+    },
+    {
+      "type": "select",
+      "id": "card_position_horizontal",
+      "label": "t:sections.highlight-window.settings.card_position_horizontal.label",
+      "options": [
+        { "value": "flex-start", "label": "t:sections.highlight-window.settings.options.left" },
+        { "value": "center", "label": "t:sections.highlight-window.settings.options.center" },
+        { "value": "flex-end", "label": "t:sections.highlight-window.settings.options.right" }
+      ],
+      "default": "flex-start"
+    },
+    {
+      "type": "select",
+      "id": "card_position_vertical",
+      "label": "t:sections.highlight-window.settings.card_position_vertical.label",
+      "options": [
+        { "value": "flex-start", "label": "t:sections.highlight-window.settings.options.top" },
+        { "value": "center", "label": "t:sections.highlight-window.settings.options.middle" },
+        { "value": "flex-end", "label": "t:sections.highlight-window.settings.options.bottom" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "label": "t:sections.highlight-window.settings.overlay_opacity.label",
+      "min": 0,
+      "max": 90,
+      "step": 5,
+      "unit": "%",
+      "default": 0
+    },
+    {
+      "type": "header",
+      "content": "t:sections.highlight-window.settings.header__card.content"
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "t:sections.highlight-window.settings.card_background.label",
+      "default": "#e4e0dd"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "t:sections.highlight-window.settings.heading_color.label",
+      "default": "#171717"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "t:sections.highlight-window.settings.text_color.label",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "t:sections.highlight-window.settings.link_color.label",
+      "default": "#841719"
+    },
+    {
+      "type": "text_alignment",
+      "id": "content_alignment",
+      "label": "t:sections.highlight-window.settings.content_alignment.label",
+      "default": "center"
+    },
+    {
+      "type": "range",
+      "id": "card_max_width",
+      "label": "t:sections.highlight-window.settings.card_max_width.label",
+      "min": 320,
+      "max": 900,
+      "step": 10,
+      "unit": "px",
+      "default": 640
+    },
+    {
+      "type": "header",
+      "content": "t:sections.highlight-window.settings.header__content.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.highlight-window.settings.image.label",
+      "info": "t:sections.highlight-window.settings.image.info"
+    },
+    {
+      "type": "range",
+      "id": "image_width",
+      "label": "t:sections.highlight-window.settings.image_width.label",
+      "min": 80,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "default": 350
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "t:sections.highlight-window.settings.heading.label",
+      "info": "t:sections.highlight-window.settings.heading.info",
+      "default": "t:sections.highlight-window.settings.heading.default"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:sections.all.heading_size.label",
+      "options": [
+        { "value": "h2", "label": "t:sections.all.heading_size.options__1.label" },
+        { "value": "h1", "label": "t:sections.all.heading_size.options__2.label" },
+        { "value": "h0", "label": "t:sections.all.heading_size.options__3.label" },
+        { "value": "hxl", "label": "t:sections.all.heading_size.options__4.label" },
+        { "value": "hxxl", "label": "t:sections.all.heading_size.options__5.label" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:sections.highlight-window.settings.description.label",
+      "info": "t:sections.highlight-window.settings.description.info",
+      "default": "t:sections.highlight-window.settings.description.default"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.highlight-window.settings.header__button.content"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "t:sections.highlight-window.settings.button_label.label",
+      "default": "t:sections.highlight-window.settings.button_label.default"
+    },
+    {
+      "type": "select",
+      "id": "button_behavior",
+      "label": "t:sections.highlight-window.settings.button_behavior.label",
+      "info": "t:sections.highlight-window.settings.button_behavior.info",
+      "options": [
+        { "value": "link", "label": "t:sections.highlight-window.settings.button_behavior.options__1.label" },
+        { "value": "add_to_cart", "label": "t:sections.highlight-window.settings.button_behavior.options__2.label" }
+      ],
+      "default": "link"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "t:sections.highlight-window.settings.button_link.label",
+      "visible_if": "{{ section.settings.button_behavior == 'link' }}"
+    },
+    {
+      "type": "product",
+      "id": "product",
+      "label": "t:sections.highlight-window.settings.product.label",
+      "info": "t:sections.highlight-window.settings.product.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "t:sections.all.padding.padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding.padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.highlight-window.presets.name"
+    }
+  ]
+}
+{% endschema %}

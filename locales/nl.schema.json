@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "Uitgelicht venster",
+      "presets": {
+        "name": "Uitgelicht venster"
+      },
+      "settings": {
+        "header__section": {
+          "content": "Sectie"
+        },
+        "header__card": {
+          "content": "Kaart"
+        },
+        "header__content": {
+          "content": "Inhoud"
+        },
+        "header__button": {
+          "content": "Knop"
+        },
+        "options": {
+          "left": "Links",
+          "center": "Midden",
+          "right": "Rechts",
+          "top": "Boven",
+          "middle": "Midden",
+          "bottom": "Onder"
+        },
+        "background_image": {
+          "label": "Achtergrondafbeelding"
+        },
+        "section_height": {
+          "label": "Sectiehoogte",
+          "options__1": {
+            "label": "Aanpassen aan inhoud"
+          },
+          "options__2": {
+            "label": "Klein"
+          },
+          "options__3": {
+            "label": "Middel"
+          },
+          "options__4": {
+            "label": "Groot"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "Horizontale positie van kaart"
+        },
+        "card_position_vertical": {
+          "label": "Verticale positie van kaart"
+        },
+        "card_background": {
+          "label": "Kaartachtergrond"
+        },
+        "heading_color": {
+          "label": "Kleur van kop"
+        },
+        "text_color": {
+          "label": "Kleur van beschrijving"
+        },
+        "link_color": {
+          "label": "Linkkleur"
+        },
+        "content_alignment": {
+          "label": "Uitlijning van inhoud"
+        },
+        "card_max_width": {
+          "label": "Maximale breedte van kaart"
+        },
+        "image": {
+          "label": "Afbeelding",
+          "info": "Laat leeg om de afbeelding van het geselecteerde product te gebruiken."
+        },
+        "image_width": {
+          "label": "Breedte van afbeelding"
+        },
+        "heading": {
+          "label": "Kop",
+          "info": "Laat leeg om de naam van het geselecteerde product te gebruiken.",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "Beschrijving",
+          "info": "Laat leeg om de beschrijving van het geselecteerde product te gebruiken.",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "Knoplabel",
+          "default": "Nu shoppen"
+        },
+        "button_behavior": {
+          "label": "Knopgedrag",
+          "info": "Kies of de knop naar een pagina linkt of een product aan de winkelwagen toevoegt.",
+          "options__1": {
+            "label": "Link"
+          },
+          "options__2": {
+            "label": "Toevoegen aan winkelwagen"
+          }
+        },
+        "button_link": {
+          "label": "Knoplink"
+        },
+        "product": {
+          "label": "Product",
+          "info": "Wordt gebruikt wanneer het knopgedrag is ingesteld op Toevoegen aan winkelwagen."
+        },
+        "overlay_opacity": {
+          "label": "Dekking van overlay op achtergrondafbeelding"
+        }
+      }
+    },
     "image-banner": {
       "name": "Bannerafbeelding",
       "settings": {

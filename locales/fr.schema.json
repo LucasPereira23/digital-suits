@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "Fenêtre de mise en avant",
+      "presets": {
+        "name": "Fenêtre de mise en avant"
+      },
+      "settings": {
+        "header__section": {
+          "content": "Section"
+        },
+        "header__card": {
+          "content": "Carte"
+        },
+        "header__content": {
+          "content": "Contenu"
+        },
+        "header__button": {
+          "content": "Bouton"
+        },
+        "options": {
+          "left": "Gauche",
+          "center": "Centre",
+          "right": "Droite",
+          "top": "Haut",
+          "middle": "Milieu",
+          "bottom": "Bas"
+        },
+        "background_image": {
+          "label": "Image d'arrière-plan"
+        },
+        "section_height": {
+          "label": "Hauteur de la section",
+          "options__1": {
+            "label": "Adapter au contenu"
+          },
+          "options__2": {
+            "label": "Petite"
+          },
+          "options__3": {
+            "label": "Moyenne"
+          },
+          "options__4": {
+            "label": "Grande"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "Position horizontale de la carte"
+        },
+        "card_position_vertical": {
+          "label": "Position verticale de la carte"
+        },
+        "card_background": {
+          "label": "Arrière-plan de la carte"
+        },
+        "heading_color": {
+          "label": "Couleur du titre"
+        },
+        "text_color": {
+          "label": "Couleur de la description"
+        },
+        "link_color": {
+          "label": "Couleur du lien"
+        },
+        "content_alignment": {
+          "label": "Alignement du contenu"
+        },
+        "card_max_width": {
+          "label": "Largeur maximale de la carte"
+        },
+        "image": {
+          "label": "Image",
+          "info": "Laissez vide pour utiliser l'image du produit sélectionné."
+        },
+        "image_width": {
+          "label": "Largeur de l'image"
+        },
+        "heading": {
+          "label": "Titre",
+          "info": "Laissez vide pour utiliser le nom du produit sélectionné.",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "Description",
+          "info": "Laissez vide pour utiliser la description du produit sélectionné.",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "Libellé du bouton",
+          "default": "Acheter"
+        },
+        "button_behavior": {
+          "label": "Comportement du bouton",
+          "info": "Choisissez si le bouton renvoie vers une page ou ajoute un produit au panier.",
+          "options__1": {
+            "label": "Lien"
+          },
+          "options__2": {
+            "label": "Ajouter au panier"
+          }
+        },
+        "button_link": {
+          "label": "Lien du bouton"
+        },
+        "product": {
+          "label": "Produit",
+          "info": "Utilisé lorsque le comportement du bouton est Ajouter au panier."
+        },
+        "overlay_opacity": {
+          "label": "Opacité de la superposition de l'image d'arrière-plan"
+        }
+      }
+    },
     "image-banner": {
       "name": "Bannière avec image",
       "settings": {

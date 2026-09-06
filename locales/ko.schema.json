@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "하이라이트 윈도우",
+      "presets": {
+        "name": "하이라이트 윈도우"
+      },
+      "settings": {
+        "header__section": {
+          "content": "섹션"
+        },
+        "header__card": {
+          "content": "카드"
+        },
+        "header__content": {
+          "content": "콘텐츠"
+        },
+        "header__button": {
+          "content": "버튼"
+        },
+        "options": {
+          "left": "왼쪽",
+          "center": "가운데",
+          "right": "오른쪽",
+          "top": "위",
+          "middle": "중간",
+          "bottom": "아래"
+        },
+        "background_image": {
+          "label": "배경 이미지"
+        },
+        "section_height": {
+          "label": "섹션 높이",
+          "options__1": {
+            "label": "콘텐츠에 맞춤"
+          },
+          "options__2": {
+            "label": "작게"
+          },
+          "options__3": {
+            "label": "보통"
+          },
+          "options__4": {
+            "label": "크게"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "카드 가로 위치"
+        },
+        "card_position_vertical": {
+          "label": "카드 세로 위치"
+        },
+        "card_background": {
+          "label": "카드 배경"
+        },
+        "heading_color": {
+          "label": "제목 색상"
+        },
+        "text_color": {
+          "label": "설명 색상"
+        },
+        "link_color": {
+          "label": "링크 색상"
+        },
+        "content_alignment": {
+          "label": "콘텐츠 정렬"
+        },
+        "card_max_width": {
+          "label": "카드 최대 너비"
+        },
+        "image": {
+          "label": "이미지",
+          "info": "비워두면 선택한 제품의 이미지가 사용됩니다."
+        },
+        "image_width": {
+          "label": "이미지 너비"
+        },
+        "heading": {
+          "label": "제목",
+          "info": "비워두면 선택한 제품의 이름이 사용됩니다.",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "설명",
+          "info": "비워두면 선택한 제품의 설명이 사용됩니다.",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "버튼 레이블",
+          "default": "지금 쇼핑하기"
+        },
+        "button_behavior": {
+          "label": "버튼 동작",
+          "info": "버튼이 페이지로 연결될지 또는 제품을 장바구니에 담을지 선택하세요.",
+          "options__1": {
+            "label": "링크"
+          },
+          "options__2": {
+            "label": "장바구니에 담기"
+          }
+        },
+        "button_link": {
+          "label": "버튼 링크"
+        },
+        "product": {
+          "label": "제품",
+          "info": "버튼 동작이 장바구니에 담기로 설정된 경우에 사용됩니다."
+        },
+        "overlay_opacity": {
+          "label": "배경 이미지 오버레이 불투명도"
+        }
+      }
+    },
     "image-banner": {
       "name": "이미지 배너",
       "settings": {

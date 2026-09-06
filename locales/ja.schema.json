@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "ハイライトウィンドウ",
+      "presets": {
+        "name": "ハイライトウィンドウ"
+      },
+      "settings": {
+        "header__section": {
+          "content": "セクション"
+        },
+        "header__card": {
+          "content": "カード"
+        },
+        "header__content": {
+          "content": "コンテンツ"
+        },
+        "header__button": {
+          "content": "ボタン"
+        },
+        "options": {
+          "left": "左",
+          "center": "中央",
+          "right": "右",
+          "top": "上",
+          "middle": "中央",
+          "bottom": "下"
+        },
+        "background_image": {
+          "label": "背景画像"
+        },
+        "section_height": {
+          "label": "セクションの高さ",
+          "options__1": {
+            "label": "コンテンツに合わせる"
+          },
+          "options__2": {
+            "label": "小"
+          },
+          "options__3": {
+            "label": "中"
+          },
+          "options__4": {
+            "label": "大"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "カードの水平位置"
+        },
+        "card_position_vertical": {
+          "label": "カードの垂直位置"
+        },
+        "card_background": {
+          "label": "カードの背景"
+        },
+        "heading_color": {
+          "label": "見出しの色"
+        },
+        "text_color": {
+          "label": "説明文の色"
+        },
+        "link_color": {
+          "label": "リンクの色"
+        },
+        "content_alignment": {
+          "label": "コンテンツの配置"
+        },
+        "card_max_width": {
+          "label": "カードの最大幅"
+        },
+        "image": {
+          "label": "画像",
+          "info": "空欄にすると、選択した商品の画像が使用されます。"
+        },
+        "image_width": {
+          "label": "画像の幅"
+        },
+        "heading": {
+          "label": "見出し",
+          "info": "空欄にすると、選択した商品名が使用されます。",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "説明",
+          "info": "空欄にすると、選択した商品の説明が使用されます。",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "ボタンのラベル",
+          "default": "今すぐ購入"
+        },
+        "button_behavior": {
+          "label": "ボタンの動作",
+          "info": "ボタンがページにリンクするか、商品をカートに追加するかを選択します。",
+          "options__1": {
+            "label": "リンク"
+          },
+          "options__2": {
+            "label": "カートに追加"
+          }
+        },
+        "button_link": {
+          "label": "ボタンのリンク"
+        },
+        "product": {
+          "label": "商品",
+          "info": "ボタンの動作が「カートに追加」の場合に使用されます。"
+        },
+        "overlay_opacity": {
+          "label": "背景画像のオーバーレイの不透明度"
+        }
+      }
+    },
     "image-banner": {
       "name": "画像バナー",
       "settings": {

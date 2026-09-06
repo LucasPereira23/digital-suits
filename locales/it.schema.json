@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "Finestra in evidenza",
+      "presets": {
+        "name": "Finestra in evidenza"
+      },
+      "settings": {
+        "header__section": {
+          "content": "Sezione"
+        },
+        "header__card": {
+          "content": "Scheda"
+        },
+        "header__content": {
+          "content": "Contenuto"
+        },
+        "header__button": {
+          "content": "Pulsante"
+        },
+        "options": {
+          "left": "Sinistra",
+          "center": "Centro",
+          "right": "Destra",
+          "top": "Alto",
+          "middle": "Centro",
+          "bottom": "Basso"
+        },
+        "background_image": {
+          "label": "Immagine di sfondo"
+        },
+        "section_height": {
+          "label": "Altezza della sezione",
+          "options__1": {
+            "label": "Adatta al contenuto"
+          },
+          "options__2": {
+            "label": "Piccola"
+          },
+          "options__3": {
+            "label": "Media"
+          },
+          "options__4": {
+            "label": "Grande"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "Posizione orizzontale della scheda"
+        },
+        "card_position_vertical": {
+          "label": "Posizione verticale della scheda"
+        },
+        "card_background": {
+          "label": "Sfondo della scheda"
+        },
+        "heading_color": {
+          "label": "Colore del titolo"
+        },
+        "text_color": {
+          "label": "Colore della descrizione"
+        },
+        "link_color": {
+          "label": "Colore del link"
+        },
+        "content_alignment": {
+          "label": "Allineamento del contenuto"
+        },
+        "card_max_width": {
+          "label": "Larghezza massima della scheda"
+        },
+        "image": {
+          "label": "Immagine",
+          "info": "Lascia vuoto per usare l'immagine del prodotto selezionato."
+        },
+        "image_width": {
+          "label": "Larghezza dell'immagine"
+        },
+        "heading": {
+          "label": "Titolo",
+          "info": "Lascia vuoto per usare il nome del prodotto selezionato.",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "Descrizione",
+          "info": "Lascia vuoto per usare la descrizione del prodotto selezionato.",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "Etichetta del pulsante",
+          "default": "Acquista ora"
+        },
+        "button_behavior": {
+          "label": "Comportamento del pulsante",
+          "info": "Scegli se il pulsante rimanda a una pagina o aggiunge un prodotto al carrello.",
+          "options__1": {
+            "label": "Link"
+          },
+          "options__2": {
+            "label": "Aggiungi al carrello"
+          }
+        },
+        "button_link": {
+          "label": "Link del pulsante"
+        },
+        "product": {
+          "label": "Prodotto",
+          "info": "Usato quando il comportamento del pulsante è Aggiungi al carrello."
+        },
+        "overlay_opacity": {
+          "label": "Opacità della sovrapposizione dell'immagine di sfondo"
+        }
+      }
+    },
     "image-banner": {
       "name": "Immagine banner",
       "settings": {

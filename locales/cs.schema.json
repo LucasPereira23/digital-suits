@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "Okno zvýraznění",
+      "presets": {
+        "name": "Okno zvýraznění"
+      },
+      "settings": {
+        "header__section": {
+          "content": "Sekce"
+        },
+        "header__card": {
+          "content": "Karta"
+        },
+        "header__content": {
+          "content": "Obsah"
+        },
+        "header__button": {
+          "content": "Tlačítko"
+        },
+        "options": {
+          "left": "Vlevo",
+          "center": "Na střed",
+          "right": "Vpravo",
+          "top": "Nahoře",
+          "middle": "Uprostřed",
+          "bottom": "Dole"
+        },
+        "background_image": {
+          "label": "Obrázek pozadí"
+        },
+        "section_height": {
+          "label": "Výška sekce",
+          "options__1": {
+            "label": "Přizpůsobit obsahu"
+          },
+          "options__2": {
+            "label": "Malá"
+          },
+          "options__3": {
+            "label": "Střední"
+          },
+          "options__4": {
+            "label": "Velká"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "Vodorovná pozice karty"
+        },
+        "card_position_vertical": {
+          "label": "Svislá pozice karty"
+        },
+        "card_background": {
+          "label": "Pozadí karty"
+        },
+        "heading_color": {
+          "label": "Barva nadpisu"
+        },
+        "text_color": {
+          "label": "Barva popisu"
+        },
+        "link_color": {
+          "label": "Barva odkazu"
+        },
+        "content_alignment": {
+          "label": "Zarovnání obsahu"
+        },
+        "card_max_width": {
+          "label": "Maximální šířka karty"
+        },
+        "image": {
+          "label": "Obrázek",
+          "info": "Ponechte prázdné, chcete-li použít obrázek vybraného produktu."
+        },
+        "image_width": {
+          "label": "Šířka obrázku"
+        },
+        "heading": {
+          "label": "Nadpis",
+          "info": "Ponechte prázdné, chcete-li použít název vybraného produktu.",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "Popis",
+          "info": "Ponechte prázdné, chcete-li použít popis vybraného produktu.",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "Popisek tlačítka",
+          "default": "Nakupovat"
+        },
+        "button_behavior": {
+          "label": "Chování tlačítka",
+          "info": "Vyberte, zda tlačítko odkazuje na stránku, nebo přidá produkt do košíku.",
+          "options__1": {
+            "label": "Odkaz"
+          },
+          "options__2": {
+            "label": "Přidat do košíku"
+          }
+        },
+        "button_link": {
+          "label": "Odkaz tlačítka"
+        },
+        "product": {
+          "label": "Produkt",
+          "info": "Používá se, když je chování tlačítka nastaveno na Přidat do košíku."
+        },
+        "overlay_opacity": {
+          "label": "Krytí překryvu obrázku pozadí"
+        }
+      }
+    },
     "image-banner": {
       "name": "Obrázkový banner",
       "settings": {

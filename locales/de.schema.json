@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "Highlight-Fenster",
+      "presets": {
+        "name": "Highlight-Fenster"
+      },
+      "settings": {
+        "header__section": {
+          "content": "Abschnitt"
+        },
+        "header__card": {
+          "content": "Karte"
+        },
+        "header__content": {
+          "content": "Inhalt"
+        },
+        "header__button": {
+          "content": "Button"
+        },
+        "options": {
+          "left": "Links",
+          "center": "Mitte",
+          "right": "Rechts",
+          "top": "Oben",
+          "middle": "Mittig",
+          "bottom": "Unten"
+        },
+        "background_image": {
+          "label": "Hintergrundbild"
+        },
+        "section_height": {
+          "label": "Abschnittshöhe",
+          "options__1": {
+            "label": "An Inhalt anpassen"
+          },
+          "options__2": {
+            "label": "Klein"
+          },
+          "options__3": {
+            "label": "Mittel"
+          },
+          "options__4": {
+            "label": "Groß"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "Horizontale Position der Karte"
+        },
+        "card_position_vertical": {
+          "label": "Vertikale Position der Karte"
+        },
+        "card_background": {
+          "label": "Kartenhintergrund"
+        },
+        "heading_color": {
+          "label": "Überschriftenfarbe"
+        },
+        "text_color": {
+          "label": "Beschreibungsfarbe"
+        },
+        "link_color": {
+          "label": "Linkfarbe"
+        },
+        "content_alignment": {
+          "label": "Inhaltsausrichtung"
+        },
+        "card_max_width": {
+          "label": "Maximale Kartenbreite"
+        },
+        "image": {
+          "label": "Bild",
+          "info": "Leer lassen, um das Bild des ausgewählten Produkts zu verwenden."
+        },
+        "image_width": {
+          "label": "Bildbreite"
+        },
+        "heading": {
+          "label": "Überschrift",
+          "info": "Leer lassen, um den Namen des ausgewählten Produkts zu verwenden.",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "Beschreibung",
+          "info": "Leer lassen, um die Beschreibung des ausgewählten Produkts zu verwenden.",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "Button-Bezeichnung",
+          "default": "Jetzt shoppen"
+        },
+        "button_behavior": {
+          "label": "Button-Verhalten",
+          "info": "Wählen Sie, ob der Button auf eine Seite verlinkt oder ein Produkt in den Warenkorb legt.",
+          "options__1": {
+            "label": "Link"
+          },
+          "options__2": {
+            "label": "In den Warenkorb"
+          }
+        },
+        "button_link": {
+          "label": "Button-Link"
+        },
+        "product": {
+          "label": "Produkt",
+          "info": "Wird verwendet, wenn das Button-Verhalten auf In den Warenkorb gesetzt ist."
+        },
+        "overlay_opacity": {
+          "label": "Deckkraft der Hintergrundbild-Überlagerung"
+        }
+      }
+    },
     "image-banner": {
       "name": "Bild-Banner",
       "settings": {

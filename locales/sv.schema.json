@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "Framhävt fönster",
+      "presets": {
+        "name": "Framhävt fönster"
+      },
+      "settings": {
+        "header__section": {
+          "content": "Sektion"
+        },
+        "header__card": {
+          "content": "Kort"
+        },
+        "header__content": {
+          "content": "Innehåll"
+        },
+        "header__button": {
+          "content": "Knapp"
+        },
+        "options": {
+          "left": "Vänster",
+          "center": "Mitten",
+          "right": "Höger",
+          "top": "Överst",
+          "middle": "Mitten",
+          "bottom": "Nederst"
+        },
+        "background_image": {
+          "label": "Bakgrundsbild"
+        },
+        "section_height": {
+          "label": "Sektionshöjd",
+          "options__1": {
+            "label": "Anpassa efter innehåll"
+          },
+          "options__2": {
+            "label": "Liten"
+          },
+          "options__3": {
+            "label": "Medel"
+          },
+          "options__4": {
+            "label": "Stor"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "Kortets horisontella position"
+        },
+        "card_position_vertical": {
+          "label": "Kortets vertikala position"
+        },
+        "card_background": {
+          "label": "Kortbakgrund"
+        },
+        "heading_color": {
+          "label": "Rubrikfärg"
+        },
+        "text_color": {
+          "label": "Beskrivningsfärg"
+        },
+        "link_color": {
+          "label": "Länkfärg"
+        },
+        "content_alignment": {
+          "label": "Innehållsjustering"
+        },
+        "card_max_width": {
+          "label": "Kortets maxbredd"
+        },
+        "image": {
+          "label": "Bild",
+          "info": "Lämna tomt för att använda den valda produktens bild."
+        },
+        "image_width": {
+          "label": "Bildbredd"
+        },
+        "heading": {
+          "label": "Rubrik",
+          "info": "Lämna tomt för att använda den valda produktens namn.",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "Beskrivning",
+          "info": "Lämna tomt för att använda den valda produktens beskrivning.",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "Knappetikett",
+          "default": "Handla nu"
+        },
+        "button_behavior": {
+          "label": "Knappbeteende",
+          "info": "Välj om knappen länkar till en sida eller lägger till en produkt i varukorgen.",
+          "options__1": {
+            "label": "Länk"
+          },
+          "options__2": {
+            "label": "Lägg i varukorgen"
+          }
+        },
+        "button_link": {
+          "label": "Knapplänk"
+        },
+        "product": {
+          "label": "Produkt",
+          "info": "Används när knappbeteendet är inställt på Lägg i varukorgen."
+        },
+        "overlay_opacity": {
+          "label": "Opacitet för bakgrundsbildens överlägg"
+        }
+      }
+    },
     "image-banner": {
       "name": "Bildbanner",
       "settings": {

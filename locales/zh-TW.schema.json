@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "精選視窗",
+      "presets": {
+        "name": "精選視窗"
+      },
+      "settings": {
+        "header__section": {
+          "content": "區段"
+        },
+        "header__card": {
+          "content": "卡片"
+        },
+        "header__content": {
+          "content": "內容"
+        },
+        "header__button": {
+          "content": "按鈕"
+        },
+        "options": {
+          "left": "靠左",
+          "center": "置中",
+          "right": "靠右",
+          "top": "頂端",
+          "middle": "置中",
+          "bottom": "底部"
+        },
+        "background_image": {
+          "label": "背景圖片"
+        },
+        "section_height": {
+          "label": "區段高度",
+          "options__1": {
+            "label": "配合內容"
+          },
+          "options__2": {
+            "label": "小"
+          },
+          "options__3": {
+            "label": "中"
+          },
+          "options__4": {
+            "label": "大"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "卡片水平位置"
+        },
+        "card_position_vertical": {
+          "label": "卡片垂直位置"
+        },
+        "card_background": {
+          "label": "卡片背景"
+        },
+        "heading_color": {
+          "label": "標題顏色"
+        },
+        "text_color": {
+          "label": "描述顏色"
+        },
+        "link_color": {
+          "label": "連結顏色"
+        },
+        "content_alignment": {
+          "label": "內容對齊"
+        },
+        "card_max_width": {
+          "label": "卡片最大寬度"
+        },
+        "image": {
+          "label": "圖片",
+          "info": "留空則使用所選商品的圖片。"
+        },
+        "image_width": {
+          "label": "圖片寬度"
+        },
+        "heading": {
+          "label": "標題",
+          "info": "留空則使用所選商品的名稱。",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "描述",
+          "info": "留空則使用所選商品的描述。",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "按鈕標籤",
+          "default": "立即購買"
+        },
+        "button_behavior": {
+          "label": "按鈕行為",
+          "info": "選擇按鈕要連結至頁面或將商品加入購物車。",
+          "options__1": {
+            "label": "連結"
+          },
+          "options__2": {
+            "label": "加入購物車"
+          }
+        },
+        "button_link": {
+          "label": "按鈕連結"
+        },
+        "product": {
+          "label": "商品",
+          "info": "當按鈕行為設定為加入購物車時使用。"
+        },
+        "overlay_opacity": {
+          "label": "背景圖片覆蓋層不透明度"
+        }
+      }
+    },
     "image-banner": {
       "name": "圖片橫幅",
       "settings": {

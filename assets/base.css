@@ -95,6 +95,12 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   max-width: 100%;
 }
 
+.page-width-large {
+  max-width: 144rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
 .page-width-desktop {
   padding: 0;
   margin: 0 auto;
@@ -118,6 +124,10 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 
   .page-width--narrow {
     padding: 0 9rem;
+  }
+
+  .page-width-large {
+    padding: 0 4.4rem;
   }
 
   .page-width-desktop {

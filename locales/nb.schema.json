@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "Fremhevet vindu",
+      "presets": {
+        "name": "Fremhevet vindu"
+      },
+      "settings": {
+        "header__section": {
+          "content": "Seksjon"
+        },
+        "header__card": {
+          "content": "Kort"
+        },
+        "header__content": {
+          "content": "Innhold"
+        },
+        "header__button": {
+          "content": "Knapp"
+        },
+        "options": {
+          "left": "Venstre",
+          "center": "Midten",
+          "right": "Høyre",
+          "top": "Øverst",
+          "middle": "Midten",
+          "bottom": "Nederst"
+        },
+        "background_image": {
+          "label": "Bakgrunnsbilde"
+        },
+        "section_height": {
+          "label": "Seksjonshøyde",
+          "options__1": {
+            "label": "Tilpass til innhold"
+          },
+          "options__2": {
+            "label": "Liten"
+          },
+          "options__3": {
+            "label": "Middels"
+          },
+          "options__4": {
+            "label": "Stor"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "Kortets horisontale posisjon"
+        },
+        "card_position_vertical": {
+          "label": "Kortets vertikale posisjon"
+        },
+        "card_background": {
+          "label": "Kortbakgrunn"
+        },
+        "heading_color": {
+          "label": "Overskriftsfarge"
+        },
+        "text_color": {
+          "label": "Beskrivelsesfarge"
+        },
+        "link_color": {
+          "label": "Lenkefarge"
+        },
+        "content_alignment": {
+          "label": "Justering av innhold"
+        },
+        "card_max_width": {
+          "label": "Maksimal bredde på kort"
+        },
+        "image": {
+          "label": "Bilde",
+          "info": "La stå tomt for å bruke bildet til det valgte produktet."
+        },
+        "image_width": {
+          "label": "Bildebredde"
+        },
+        "heading": {
+          "label": "Overskrift",
+          "info": "La stå tomt for å bruke navnet på det valgte produktet.",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "Beskrivelse",
+          "info": "La stå tomt for å bruke beskrivelsen av det valgte produktet.",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "Knappetikett",
+          "default": "Kjøp nå"
+        },
+        "button_behavior": {
+          "label": "Knappeatferd",
+          "info": "Velg om knappen lenker til en side eller legger et produkt i handlekurven.",
+          "options__1": {
+            "label": "Lenke"
+          },
+          "options__2": {
+            "label": "Legg i handlekurv"
+          }
+        },
+        "button_link": {
+          "label": "Knappelenke"
+        },
+        "product": {
+          "label": "Produkt",
+          "info": "Brukes når knappeatferden er satt til Legg i handlekurv."
+        },
+        "overlay_opacity": {
+          "label": "Gjennomsiktighet for bakgrunnsbildeoverlegg"
+        }
+      }
+    },
     "image-banner": {
       "name": "Bildeoverskrift",
       "settings": {

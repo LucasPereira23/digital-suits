@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "หน้าต่างไฮไลต์",
+      "presets": {
+        "name": "หน้าต่างไฮไลต์"
+      },
+      "settings": {
+        "header__section": {
+          "content": "ส่วน"
+        },
+        "header__card": {
+          "content": "การ์ด"
+        },
+        "header__content": {
+          "content": "เนื้อหา"
+        },
+        "header__button": {
+          "content": "ปุ่ม"
+        },
+        "options": {
+          "left": "ซ้าย",
+          "center": "กึ่งกลาง",
+          "right": "ขวา",
+          "top": "บน",
+          "middle": "กลาง",
+          "bottom": "ล่าง"
+        },
+        "background_image": {
+          "label": "รูปภาพพื้นหลัง"
+        },
+        "section_height": {
+          "label": "ความสูงของส่วน",
+          "options__1": {
+            "label": "ปรับตามเนื้อหา"
+          },
+          "options__2": {
+            "label": "เล็ก"
+          },
+          "options__3": {
+            "label": "กลาง"
+          },
+          "options__4": {
+            "label": "ใหญ่"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "ตำแหน่งแนวนอนของการ์ด"
+        },
+        "card_position_vertical": {
+          "label": "ตำแหน่งแนวตั้งของการ์ด"
+        },
+        "card_background": {
+          "label": "พื้นหลังการ์ด"
+        },
+        "heading_color": {
+          "label": "สีหัวข้อ"
+        },
+        "text_color": {
+          "label": "สีคำอธิบาย"
+        },
+        "link_color": {
+          "label": "สีลิงก์"
+        },
+        "content_alignment": {
+          "label": "การจัดวางเนื้อหา"
+        },
+        "card_max_width": {
+          "label": "ความกว้างสูงสุดของการ์ด"
+        },
+        "image": {
+          "label": "รูปภาพ",
+          "info": "เว้นว่างไว้เพื่อใช้รูปภาพของสินค้าที่เลือก"
+        },
+        "image_width": {
+          "label": "ความกว้างของรูปภาพ"
+        },
+        "heading": {
+          "label": "หัวข้อ",
+          "info": "เว้นว่างไว้เพื่อใช้ชื่อสินค้าที่เลือก",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "คำอธิบาย",
+          "info": "เว้นว่างไว้เพื่อใช้คำอธิบายของสินค้าที่เลือก",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "ป้ายกำกับปุ่ม",
+          "default": "ซื้อเลย"
+        },
+        "button_behavior": {
+          "label": "ลักษณะการทำงานของปุ่ม",
+          "info": "เลือกว่าปุ่มจะลิงก์ไปยังหน้าเว็บหรือเพิ่มสินค้าลงตะกร้า",
+          "options__1": {
+            "label": "ลิงก์"
+          },
+          "options__2": {
+            "label": "เพิ่มลงตะกร้า"
+          }
+        },
+        "button_link": {
+          "label": "ลิงก์ของปุ่ม"
+        },
+        "product": {
+          "label": "สินค้า",
+          "info": "ใช้เมื่อตั้งค่าลักษณะการทำงานของปุ่มเป็นเพิ่มลงตะกร้า"
+        },
+        "overlay_opacity": {
+          "label": "ความทึบของโอเวอร์เลย์รูปภาพพื้นหลัง"
+        }
+      }
+    },
     "image-banner": {
       "name": "แบนเนอร์รูปภาพ",
       "settings": {

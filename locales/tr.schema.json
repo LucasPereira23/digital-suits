@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "Öne çıkan pencere",
+      "presets": {
+        "name": "Öne çıkan pencere"
+      },
+      "settings": {
+        "header__section": {
+          "content": "Bölüm"
+        },
+        "header__card": {
+          "content": "Kart"
+        },
+        "header__content": {
+          "content": "İçerik"
+        },
+        "header__button": {
+          "content": "Düğme"
+        },
+        "options": {
+          "left": "Sol",
+          "center": "Orta",
+          "right": "Sağ",
+          "top": "Üst",
+          "middle": "Orta",
+          "bottom": "Alt"
+        },
+        "background_image": {
+          "label": "Arka plan görseli"
+        },
+        "section_height": {
+          "label": "Bölüm yüksekliği",
+          "options__1": {
+            "label": "İçeriğe uyarla"
+          },
+          "options__2": {
+            "label": "Küçük"
+          },
+          "options__3": {
+            "label": "Orta"
+          },
+          "options__4": {
+            "label": "Büyük"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "Kartın yatay konumu"
+        },
+        "card_position_vertical": {
+          "label": "Kartın dikey konumu"
+        },
+        "card_background": {
+          "label": "Kart arka planı"
+        },
+        "heading_color": {
+          "label": "Başlık rengi"
+        },
+        "text_color": {
+          "label": "Açıklama rengi"
+        },
+        "link_color": {
+          "label": "Bağlantı rengi"
+        },
+        "content_alignment": {
+          "label": "İçerik hizalaması"
+        },
+        "card_max_width": {
+          "label": "Kartın maksimum genişliği"
+        },
+        "image": {
+          "label": "Görsel",
+          "info": "Seçili ürünün görselini kullanmak için boş bırakın."
+        },
+        "image_width": {
+          "label": "Görsel genişliği"
+        },
+        "heading": {
+          "label": "Başlık",
+          "info": "Seçili ürünün adını kullanmak için boş bırakın.",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "Açıklama",
+          "info": "Seçili ürünün açıklamasını kullanmak için boş bırakın.",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "Düğme etiketi",
+          "default": "Şimdi satın al"
+        },
+        "button_behavior": {
+          "label": "Düğme davranışı",
+          "info": "Düğmenin bir sayfaya bağlanmasını mı yoksa sepete ürün eklemesini mi istediğinizi seçin.",
+          "options__1": {
+            "label": "Bağlantı"
+          },
+          "options__2": {
+            "label": "Sepete ekle"
+          }
+        },
+        "button_link": {
+          "label": "Düğme bağlantısı"
+        },
+        "product": {
+          "label": "Ürün",
+          "info": "Düğme davranışı Sepete ekle olarak ayarlandığında kullanılır."
+        },
+        "overlay_opacity": {
+          "label": "Arka plan görseli yer paylaşımı opaklığı"
+        }
+      }
+    },
     "image-banner": {
       "name": "Görsel banner'ı",
       "settings": {

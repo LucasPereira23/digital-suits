@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "Korostusikkuna",
+      "presets": {
+        "name": "Korostusikkuna"
+      },
+      "settings": {
+        "header__section": {
+          "content": "Osio"
+        },
+        "header__card": {
+          "content": "Kortti"
+        },
+        "header__content": {
+          "content": "Sisältö"
+        },
+        "header__button": {
+          "content": "Painike"
+        },
+        "options": {
+          "left": "Vasen",
+          "center": "Keskitetty",
+          "right": "Oikea",
+          "top": "Ylhäällä",
+          "middle": "Keskellä",
+          "bottom": "Alhaalla"
+        },
+        "background_image": {
+          "label": "Taustakuva"
+        },
+        "section_height": {
+          "label": "Osion korkeus",
+          "options__1": {
+            "label": "Mukauta sisältöön"
+          },
+          "options__2": {
+            "label": "Pieni"
+          },
+          "options__3": {
+            "label": "Keskikokoinen"
+          },
+          "options__4": {
+            "label": "Suuri"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "Kortin vaakasuuntainen sijainti"
+        },
+        "card_position_vertical": {
+          "label": "Kortin pystysuuntainen sijainti"
+        },
+        "card_background": {
+          "label": "Kortin tausta"
+        },
+        "heading_color": {
+          "label": "Otsikon väri"
+        },
+        "text_color": {
+          "label": "Kuvauksen väri"
+        },
+        "link_color": {
+          "label": "Linkin väri"
+        },
+        "content_alignment": {
+          "label": "Sisällön tasaus"
+        },
+        "card_max_width": {
+          "label": "Kortin enimmäisleveys"
+        },
+        "image": {
+          "label": "Kuva",
+          "info": "Jätä tyhjäksi, niin käytetään valitun tuotteen kuvaa."
+        },
+        "image_width": {
+          "label": "Kuvan leveys"
+        },
+        "heading": {
+          "label": "Otsikko",
+          "info": "Jätä tyhjäksi, niin käytetään valitun tuotteen nimeä.",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "Kuvaus",
+          "info": "Jätä tyhjäksi, niin käytetään valitun tuotteen kuvausta.",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "Painikkeen teksti",
+          "default": "Osta nyt"
+        },
+        "button_behavior": {
+          "label": "Painikkeen toiminta",
+          "info": "Valitse, linkittääkö painike sivulle vai lisääkö se tuotteen ostoskoriin.",
+          "options__1": {
+            "label": "Linkki"
+          },
+          "options__2": {
+            "label": "Lisää ostoskoriin"
+          }
+        },
+        "button_link": {
+          "label": "Painikkeen linkki"
+        },
+        "product": {
+          "label": "Tuote",
+          "info": "Käytetään, kun painikkeen toiminnaksi on valittu Lisää ostoskoriin."
+        },
+        "overlay_opacity": {
+          "label": "Taustakuvan peiton läpinäkyvyys"
+        }
+      }
+    },
     "image-banner": {
       "name": "Kuvabanneri",
       "settings": {

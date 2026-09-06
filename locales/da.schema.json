@@ -1006,6 +1006,117 @@
         }
       }
     },
+    "highlight-window": {
+      "name": "Fremhævet vindue",
+      "presets": {
+        "name": "Fremhævet vindue"
+      },
+      "settings": {
+        "header__section": {
+          "content": "Sektion"
+        },
+        "header__card": {
+          "content": "Kort"
+        },
+        "header__content": {
+          "content": "Indhold"
+        },
+        "header__button": {
+          "content": "Knap"
+        },
+        "options": {
+          "left": "Venstre",
+          "center": "Midten",
+          "right": "Højre",
+          "top": "Øverst",
+          "middle": "Midten",
+          "bottom": "Nederst"
+        },
+        "background_image": {
+          "label": "Baggrundsbillede"
+        },
+        "section_height": {
+          "label": "Sektionshøjde",
+          "options__1": {
+            "label": "Tilpas til indhold"
+          },
+          "options__2": {
+            "label": "Lille"
+          },
+          "options__3": {
+            "label": "Mellem"
+          },
+          "options__4": {
+            "label": "Stor"
+          }
+        },
+        "card_position_horizontal": {
+          "label": "Kortets vandrette placering"
+        },
+        "card_position_vertical": {
+          "label": "Kortets lodrette placering"
+        },
+        "card_background": {
+          "label": "Kortbaggrund"
+        },
+        "heading_color": {
+          "label": "Overskriftsfarve"
+        },
+        "text_color": {
+          "label": "Beskrivelsesfarve"
+        },
+        "link_color": {
+          "label": "Linkfarve"
+        },
+        "content_alignment": {
+          "label": "Justering af indhold"
+        },
+        "card_max_width": {
+          "label": "Kortets maksimale bredde"
+        },
+        "image": {
+          "label": "Billede",
+          "info": "Lad feltet stå tomt for at bruge billedet fra det valgte produkt."
+        },
+        "image_width": {
+          "label": "Billedbredde"
+        },
+        "heading": {
+          "label": "Overskrift",
+          "info": "Lad feltet stå tomt for at bruge navnet på det valgte produkt.",
+          "default": "Lorem ipsum dolor"
+        },
+        "description": {
+          "label": "Beskrivelse",
+          "info": "Lad feltet stå tomt for at bruge beskrivelsen af det valgte produkt.",
+          "default": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>"
+        },
+        "button_label": {
+          "label": "Knapetiket",
+          "default": "Køb nu"
+        },
+        "button_behavior": {
+          "label": "Knapadfærd",
+          "info": "Vælg, om knappen linker til en side eller føjer et produkt til kurven.",
+          "options__1": {
+            "label": "Link"
+          },
+          "options__2": {
+            "label": "Føj til kurv"
+          }
+        },
+        "button_link": {
+          "label": "Knaplink"
+        },
+        "product": {
+          "label": "Produkt",
+          "info": "Bruges, når knapadfærden er sat til Føj til kurv."
+        },
+        "overlay_opacity": {
+          "label": "Uigennemsigtighed for baggrundsbilledets overlejring"
+        }
+      }
+    },
     "image-banner": {
       "name": "Billedbanner",
       "settings": {
