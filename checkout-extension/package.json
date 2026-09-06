@@ -1,0 +1,16 @@
+{
+  "name": "checkout-extension",
+  "private": true,
+  "workspaces": [
+    "extensions/*"
+  ],
+  "scripts": {
+    "dev": "shopify app dev",
+    "deploy": "shopify app deploy",
+    "config:link": "shopify app config link",
+    "info": "shopify app info"
+  },
+  "devDependencies": {
+    "@shopify/cli": "^4.7.1"
+  }
+}

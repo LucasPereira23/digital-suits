@@ -1,0 +1,21 @@
+# Learn more about configuring your checkout UI extension:
+# https://shopify.dev/docs/api/checkout-ui-extensions/latest/configuration
+api_version = "2026-07"
+
+[[extensions]]
+name = "t:name"
+handle = "business-reg-number"
+uid = "e955ee44-15a3-f3d9-5dfe-8ff2555f37fe4c78b11c"
+type = "ui_extension"
+
+[[extensions.targeting]]
+module = "./src/Checkout.jsx"
+target = "purchase.checkout.delivery-address.render-after"
+
+[[extensions.targeting.metafields]]
+namespace = "custom"
+key = "business_registration_number"
+
+[extensions.capabilities]
+# Required to block "Continue to shipping" / "Pay" until the field is valid.
+block_progress = true

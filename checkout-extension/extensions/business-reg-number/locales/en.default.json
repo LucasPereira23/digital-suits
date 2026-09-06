@@ -1,0 +1,6 @@
+{
+  "name": "Business registration number",
+  "fieldLabel": "Business registration number (optional)",
+  "fieldHelpText": "Format: UA followed by 8-10 digits (10-12 characters total).",
+  "errorFormat": "Enter a valid registration number, e.g. UA12345678."
+}
